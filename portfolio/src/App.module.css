@@ -1,0 +1,39 @@
+/* App.module.css */
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-16) var(--page-px) var(--space-20);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.workSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.sectionLabel {
+  /* inherits .label from globals */
+}
+
+.workGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+
+.empty {
+  grid-column: 1 / -1;
+  font-size: var(--text-sm);
+  padding: var(--space-10) 0;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .workGrid {
+    grid-template-columns: 1fr;
+  }
+}

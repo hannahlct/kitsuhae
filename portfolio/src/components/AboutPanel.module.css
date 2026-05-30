@@ -1,0 +1,52 @@
+/* AboutPanel.module.css */
+
+.panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  animation: fadeUp var(--duration-slower) var(--ease-out) 120ms both;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.tagline {
+  font-size: var(--text-2xl);
+  line-height: var(--leading-tight);
+}
+
+.text {
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+  line-height: var(--leading-loose);
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+@media (max-width: 640px) {
+  .panel {
+    grid-template-columns: 1fr;
+  }
+}
